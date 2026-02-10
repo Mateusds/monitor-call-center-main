@@ -1,0 +1,411 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 250 35% 97%;
+    --foreground: 260 40% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 40% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 40% 15%;
+
+    --primary: 262 52% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 250 40% 92%;
+    --secondary-foreground: 260 40% 15%;
+
+    --muted: 250 40% 92%;
+    --muted-foreground: 260 20% 50%;
+
+    --accent: 280 65% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 250 25% 88%;
+    --input: 250 25% 88%;
+    --ring: 262 52% 47%;
+
+    --radius: 0.75rem;
+
+    --chart-1: 280 65% 60%;
+    --chart-2: 262 52% 47%;
+    --chart-3: 142 76% 36%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 0 84% 60%;
+
+    /* Violet shadows */
+    --shadow-violet-sm: 0 2px 8px -2px hsl(262 52% 47% / 0.15);
+    --shadow-violet-md: 0 4px 16px -4px hsl(262 52% 47% / 0.2);
+    --shadow-violet-lg: 0 8px 24px -8px hsl(262 52% 47% / 0.25);
+    --shadow-violet-xl: 0 12px 32px -12px hsl(262 52% 47% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 240 6% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 260 35% 8%;
+    --foreground: 250 30% 92%;
+
+    --card: 260 30% 12%;
+    --card-foreground: 250 30% 92%;
+
+    --popover: 260 30% 12%;
+    --popover-foreground: 250 30% 92%;
+
+    --primary: 268 75% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 25% 18%;
+    --secondary-foreground: 250 30% 92%;
+
+    --muted: 260 25% 18%;
+    --muted-foreground: 250 20% 65%;
+
+    --accent: 280 70% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 50%;
+    --destructive-foreground: 250 30% 92%;
+
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 60%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 260 20% 22%;
+    --input: 260 20% 22%;
+    --ring: 268 75% 65%;
+
+    --chart-1: 280 70% 65%;
+    --chart-2: 268 75% 65%;
+    --chart-3: 142 76% 45%;
+    --chart-4: 38 92% 60%;
+    --chart-5: 0 63% 50%;
+
+    /* Violet shadows for dark mode */
+    --shadow-violet-sm: 0 2px 8px -2px hsl(268 75% 65% / 0.2);
+    --shadow-violet-md: 0 4px 16px -4px hsl(268 75% 65% / 0.25);
+    --shadow-violet-lg: 0 8px 24px -8px hsl(268 75% 65% / 0.3);
+    --shadow-violet-xl: 0 12px 32px -12px hsl(268 75% 65% / 0.35);
+
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 224 76% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Gradient intensities */
+  .gradient-subtle body::before {
+    opacity: 0.3;
+  }
+
+  .gradient-medium body::before {
+    opacity: 0.6;
+  }
+
+  .gradient-intense body::before {
+    opacity: 1;
+  }
+
+  /* High contrast mode */
+  .high-contrast {
+    --primary: 262 80% 45%;
+    --accent: 280 90% 55%;
+    --border: 260 50% 60%;
+    --success: 142 90% 35%;
+    --warning: 38 100% 45%;
+    --destructive: 0 90% 55%;
+    --muted-foreground: 260 30% 40%;
+  }
+
+  .dark.high-contrast {
+    --primary: 268 100% 80%;
+    --accent: 280 100% 80%;
+    --border: 260 60% 50%;
+    --success: 142 90% 60%;
+    --warning: 38 100% 65%;
+    --destructive: 0 90% 65%;
+    --muted-foreground: 250 30% 75%;
+    --foreground: 250 40% 98%;
+    --card: 260 40% 15%;
+    --background: 260 45% 10%;
+  }
+
+  /* High contrast icon colors */
+  .high-contrast svg,
+  .high-contrast [class*="lucide"] {
+    color: hsl(262 80% 45%) !important;
+  }
+
+  .dark.high-contrast svg,
+  .dark.high-contrast [class*="lucide"] {
+    color: hsl(268 100% 85%) !important;
+  }
+
+  /* Exception for success icons */
+  .high-contrast .text-success svg,
+  .high-contrast [class*="text-success"] svg {
+    color: hsl(142 90% 30%) !important;
+  }
+
+  .dark.high-contrast .text-success svg,
+  .dark.high-contrast [class*="text-success"] svg {
+    color: hsl(142 90% 70%) !important;
+  }
+
+  /* Exception for destructive/error icons */
+  .high-contrast .text-destructive svg,
+  .high-contrast [class*="text-destructive"] svg {
+    color: hsl(0 90% 50%) !important;
+  }
+
+  .dark.high-contrast .text-destructive svg,
+  .dark.high-contrast [class*="text-destructive"] svg {
+    color: hsl(0 90% 70%) !important;
+  }
+
+  /* Exception for warning icons */
+  .high-contrast .text-warning svg,
+  .high-contrast [class*="text-warning"] svg {
+    color: hsl(38 100% 40%) !important;
+  }
+
+  .dark.high-contrast .text-warning svg,
+  .dark.high-contrast [class*="text-warning"] svg {
+    color: hsl(38 100% 70%) !important;
+  }
+
+  /* Exception for primary colored icons */
+  .high-contrast .text-primary svg,
+  .high-contrast [class*="text-primary"] svg {
+    color: hsl(262 90% 40%) !important;
+  }
+
+  .dark.high-contrast .text-primary svg,
+  .dark.high-contrast [class*="text-primary"] svg {
+    color: hsl(268 100% 85%) !important;
+  }
+
+  /* Exception for white icons (in gradients, etc) */
+  .high-contrast .text-white svg,
+  .high-contrast [class*="text-white"] svg,
+  .high-contrast [class*="text-primary-foreground"] svg {
+    color: hsl(0 0% 100%) !important;
+  }
+
+  /* Improve card text contrast in high contrast mode */
+  .high-contrast .card-violet {
+    background: hsl(var(--card) / 0.95);
+    border: 2px solid hsl(262 70% 50%);
+  }
+
+  .dark.high-contrast .card-violet {
+    background: hsl(var(--card) / 0.95);
+    border: 2px solid hsl(268 90% 70%);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(
+      135deg,
+      hsl(250 40% 97%) 0%,
+      hsl(260 35% 95%) 25%,
+      hsl(270 30% 96%) 50%,
+      hsl(260 35% 95%) 75%,
+      hsl(250 40% 97%) 100%
+    );
+    background-size: 200% 200%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  .dark body::before {
+    background: linear-gradient(
+      135deg,
+      hsl(260 35% 8%) 0%,
+      hsl(270 40% 10%) 25%,
+      hsl(280 35% 12%) 50%,
+      hsl(270 40% 10%) 75%,
+      hsl(260 35% 8%) 100%
+    );
+    background-size: 200% 200%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+}
+
+@layer utilities {
+  /* Fade animations */
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Scale animations */
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out;
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Hover effects */
+  .hover-scale {
+    transition: transform 0.2s ease-out;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  /* Violet shadows */
+  .shadow-violet-sm {
+    box-shadow: var(--shadow-violet-sm);
+  }
+
+  .shadow-violet-md {
+    box-shadow: var(--shadow-violet-md);
+  }
+
+  .shadow-violet-lg {
+    box-shadow: var(--shadow-violet-lg);
+  }
+
+  .shadow-violet-xl {
+    box-shadow: var(--shadow-violet-xl);
+  }
+
+  /* Card styles with violet borders and transparency */
+  .card-violet {
+    background: hsl(var(--card) / 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(262 52% 47% / 0.12);
+    box-shadow: var(--shadow-violet-md);
+    transition: all 0.3s ease;
+  }
+
+  .card-violet:hover {
+    border-color: hsl(262 52% 47% / 0.25);
+    box-shadow: var(--shadow-violet-lg);
+    transform: translateY(-2px);
+  }
+
+  .dark .card-violet {
+    background: hsl(var(--card) / 0.85);
+    border: 1px solid hsl(268 75% 65% / 0.15);
+    box-shadow: var(--shadow-violet-md);
+  }
+
+  .dark .card-violet:hover {
+    border-color: hsl(268 75% 65% / 0.3);
+    box-shadow: var(--shadow-violet-lg);
+  }
+
+  /* Interactive elements */
+  .interactive-violet {
+    transition: all 0.2s ease;
+  }
+
+  .interactive-violet:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-violet-sm);
+  }
+
+  .interactive-violet:active {
+    transform: translateY(0);
+  }
+
+  .interactive-violet:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+
+  /* Button hover effects */
+  button, a, input, textarea {
+    transition: all 0.2s ease;
+  }
+
+  button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.1);
+  }
+
+  /* Smooth animations for cards */
+  .card-enter {
+    animation: fade-in 0.4s ease-out, scale-in 0.4s ease-out;
+  }
+}

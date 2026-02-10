@@ -1,0 +1,15 @@
+﻿[
+  "Fila",
+  "Telefone da \nChamada",
+  "Status da \nChamada",
+  "Data e Hora\nChamada",
+  "Data e Hora\nAtendimento chamada",
+  "Data e Hora\nEncerramento chamada",
+  "Tempo de \nEspera",
+  "Tempo de \nAtendimento (seg)",
+  "Tempo de \nAtendimento (min)",
+  "Ramal",
+  "Operador",
+  "ID da chamada",
+  "opcUra"
+]

@@ -1,0 +1,118 @@
+﻿=== ESTAT├ìSTICAS POR OPERADOR E STATUS ===
+{
+  "WINNY VIANA 1040/2003": {
+    "Atendidas": 223
+  },
+  "KASSIA 1017/1041": {
+    "Atendidas": 884,
+    "Transferidas": 25
+  },
+  "JOCELAINE SANTOS 1010/1034": {
+    "Atendidas": 604,
+    "Transferidas": 9
+  },
+  "ALICIA RAMOS 1013/1031": {
+    "Atendidas": 1359,
+    "Transferidas": 48
+  },
+  "LAURA LEITE 1038/": {
+    "Atendidas": 650,
+    "Transferidas": 26
+  },
+  "SEM OPERADOR": {
+    "Abandonadas": 3296,
+    "VAZIO": 103
+  },
+  "STHEFANIE 1039/1015": {
+    "Atendidas": 1629,
+    "Transferidas": 35
+  },
+  "GIOVANNA 1011/1032": {
+    "Atendidas": 722,
+    "Transferidas": 23
+  },
+  "KELLE1008/1036": {
+    "Atendidas": 1137,
+    "Transferidas": 38
+  },
+  "LAURA 1038": {
+    "Atendidas": 619,
+    "Transferidas": 18
+  },
+  "EDNEIA 1041": {
+    "Atendidas": 1018,
+    "Transferidas": 30
+  },
+  "MICAELLE 1034/1010": {
+    "Atendidas": 129,
+    "Transferidas": 4
+  },
+  "ADAMYS RAMALHO 1032/1011": {
+    "Atendidas": 949,
+    "Transferidas": 21
+  },
+  "ALICYA BARROS 1042/1009": {
+    "Atendidas": 882,
+    "Transferidas": 15
+  },
+  "NATANAEL SILVA 2003/1040": {
+    "Atendidas": 281
+  },
+  "SIMONE GOMES 1009/1042": {
+    "Atendidas": 1289,
+    "Transferidas": 32
+  },
+  "EVILYANE ARAUJO 1014/1038": {
+    "Atendidas": 1210,
+    "Transferidas": 21
+  },
+  "1015/1039": {
+    "Transferidas": 1,
+    "Atendidas": 3
+  },
+  "JACIELLY SOUZA": {
+    "Atendidas": 414,
+    "Transferidas": 1
+  },
+  "JULIANA PEREIRA 1019/1024": {
+    "Atendidas": 1491,
+    "Transferidas": 5
+  },
+  "MICHAELLE SILVA 1018/1029": {
+    "Atendidas": 1698,
+    "Transferidas": 15
+  },
+  "CINTHIA 1033": {
+    "Atendidas": 1991,
+    "Transferidas": 11
+  },
+  "DISPONIVEL 1036/1008": {
+    "Transferidas": 2,
+    "Atendidas": 9
+  },
+  "KAYTH FERREIRA 2032/2005": {
+    "Atendidas": 4
+  },
+  "LETICIA": {
+    "Atendidas": 170,
+    "Transferidas": 5
+  },
+  "DEIVID MENEZES": {
+    "Atendidas": 2
+  },
+  "JULIANA PEREIRA 1024/1019": {
+    "Atendidas": 1
+  },
+  "FERNANDA CAVALCANTE": {
+    "Atendidas": 942,
+    "Transferidas": 1
+  },
+  "EDUARDA COSTA": {
+    "Atendidas": 1320,
+    "Transferidas": 7
+  },
+  "LARISSA ARAUJO": {
+    "Atendidas": 1452,
+    "Transferidas": 7
+  }
+}

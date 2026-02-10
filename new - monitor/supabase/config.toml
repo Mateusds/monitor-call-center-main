@@ -1,0 +1,25 @@
+project_id = "axonnnnkmloyyklncsnw"
+
+[functions.send-alert-email]
+verify_jwt = true
+
+[functions.create-user]
+verify_jwt = true
+
+[functions.toggle-user-status]
+verify_jwt = true
+
+[functions.get-user-status]
+verify_jwt = true
+
+[functions.reset-password]
+verify_jwt = true
+
+[functions.change-password]
+verify_jwt = true
+
+[functions.setup-visitor]
+verify_jwt = true
+
+[functions.security-monitor]
+verify_jwt = true

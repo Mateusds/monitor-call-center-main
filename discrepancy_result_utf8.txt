@@ -1,0 +1,8 @@
+﻿--- ESTAT├ìSTICAS CINTHIA (1033) ---
+Total de registros: 2002
+Status encontrados: {
+  "Atendidas": 1991,
+  "Transferidas": 11
+}
+Atendidas com tempo > 0: 1991
+Atendidas com tempo = 0: 0
