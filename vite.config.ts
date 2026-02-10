@@ -4,6 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ command, mode }) => ({
+  base: "/monitor-call-center-main/",
   define: {
     "process.env.NODE_ENV": JSON.stringify(command === "serve" ? "development" : "production"),
   },
@@ -12,7 +13,8 @@ export default defineConfig(({ command, mode }) => ({
     port: 8080,
 
     allowedHosts: [
-      "monitor-call-center-smile-saude.onrender.com"
+      "monitor-call-center-smile-saude.onrender.com",
+      "8080-im0dqmjoyfiailjvnajv5-70a4a36b.us1.manus.computer"
     ],
 
     hmr: {
