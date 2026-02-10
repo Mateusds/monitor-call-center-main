@@ -7,17 +7,24 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+
     allowedHosts: [
       "monitor-call-center-smile-saude.onrender.com"
     ],
+
     hmr: {
+      protocol: "wss",
+      host: "monitor-call-center-smile-saude.onrender.com",
+      clientPort: 443,
       overlay: false,
     },
   },
+
   plugins: [
     react(),
     mode === "development" && componentTagger()
   ].filter(Boolean),
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
