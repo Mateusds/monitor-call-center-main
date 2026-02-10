@@ -3,9 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ command, mode }) => ({
   define: {
-    "process.env.NODE_ENV": JSON.stringify(mode === "development" ? "development" : "production"),
+    "process.env.NODE_ENV": JSON.stringify(command === "serve" ? "development" : "production"),
   },
   server: {
     host: "::",
