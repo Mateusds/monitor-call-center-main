@@ -4,6 +4,9 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
+  define: {
+    "process.env.NODE_ENV": JSON.stringify(mode === "development" ? "development" : "production"),
+  },
   server: {
     host: "::",
     port: 8080,
