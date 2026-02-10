@@ -85,7 +85,7 @@ export function Sidebar({ activeTab, onTabChange, isCollapsed, onToggle }: Sideb
           {!isCollapsed && (
             <div className="px-4 animate-in fade-in duration-500">
               <p className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/40">Fevereiro 2026</p>
-              <p className="text-[10px] font-bold text-muted-foreground/30">Versão 1.2.0-Smile Saúde</p>
+              <p className="text-[10px] font-bold text-muted-foreground/30">Versão 1.3.0-Smile Saúde</p>
             </div>
           )}
         </div>

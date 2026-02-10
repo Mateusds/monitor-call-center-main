@@ -401,29 +401,7 @@ export function DashboardView() {
                         const range = maxValue - minValue;
                         const intensity = range > 0 ? (value - minValue) / range : 0;
 
-                        // Debug para primeira célula de cada linha
-                        if (colIndex === 0) {
-                          console.log(`🔥 DEBUG - ${row.hora}:`, {
-                            value,
-                            allValues: allValues.slice(0, 5), // Mostrar primeiros valores
-                            validValues: validValues.slice(0, 5), // Mostrar primeiros válidos
-                            maxValue,
-                            minValue,
-                            range,
-                            intensity,
-                            color: intensity < 0.25 ? 'blue-100' : intensity < 0.5 ? 'blue-300' : intensity < 0.75 ? 'orange-400' : 'red-500'
-                          });
-                        }
-
-                        // Debug específico para sábado (colIndex 5)
-                        if (colIndex === 5) {
-                          console.log(`🔥 DEBUG - SÁBADO ${row.hora}:`, {
-                            value: row.sab,
-                            position: 'colIndex 5 (sábado)',
-                            hasValue: row.sab > 0
-                          });
-                        }
-
+                        
                         const getColor = () => {
                           if (intensity < 0.25) return 'bg-blue-100 text-gray-800';
                           if (intensity < 0.5) return 'bg-blue-300 text-gray-800';
