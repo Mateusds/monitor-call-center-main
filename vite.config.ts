@@ -4,24 +4,15 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ command, mode }) => ({
-  // ADICIONE ESTA LINHA ABAIXO:
   base: mode === "production" ? "/monitor-call-center-main/" : "/",
 
   define: {
     "process.env.NODE_ENV": JSON.stringify(command === "serve" ? "development" : "production"),
   },
   server: {
-    host: "::",
+    host: "0.0.0.0",
     port: 8080,
-    allowedHosts: [
-      "monitor-call-center-smile-saude.onrender.com",
-      "8080-im0dqmjoyfiailjvnajv5-70a4a36b.us1.manus.computer",
-      ".vercel.app"
-    ],
     hmr: {
-      protocol: "wss",
-      host: "monitor-call-center-smile-saude.onrender.com",
-      clientPort: 443,
       overlay: false,
     },
   },

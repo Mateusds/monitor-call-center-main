@@ -13,8 +13,7 @@ const App = () => (
     <TooltipProvider delayDuration={300}>
       <Toaster />
       <Sonner />
-      {/* Adicione o basename aqui */}
-      <BrowserRouter basename="/monitor-call-center-main">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
