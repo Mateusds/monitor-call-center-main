@@ -34,7 +34,11 @@ export async function readChatCsvFile(filePath: string): Promise<ChatCsvRow[]> {
     try {
         console.log('Iniciando leitura do arquivo CSV de Chat (Text Mode):', filePath);
 
-        const response = await fetch(filePath);
+        // Adicionar o basename para produção
+        const basePath = import.meta.env.PROD ? '/monitor-call-center-main' : '';
+        const fullFilePath = basePath + filePath;
+        
+        const response = await fetch(fullFilePath);
 
         if (!response.ok) {
             throw new Error(`Erro ao buscar arquivo: ${response.status} ${response.statusText}`);
