@@ -89,6 +89,16 @@ export function OperatorsView() {
         currentPeriod={data?.kpiData?.periodo || 'Carregando...'}
       />
 
+      {/* Notificação sobre fonte dos dados */}
+      <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+        <div className="flex items-center gap-2">
+          <AlertCircle className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+          <span className="text-sm text-blue-700 dark:text-blue-300">
+            📊 Dados obtidos dos relatórios exportados da plataforma <strong>VoipforAll</strong>
+          </span>
+        </div>
+      </div>
+
       {/* Operator Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {operators.map((operator: any, index: number) => (
