@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/api/take-blip/dashboard",
+      "destination": "https://backend-blip.vercel.app/api/dashboard.ts"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

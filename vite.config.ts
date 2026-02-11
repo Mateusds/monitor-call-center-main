@@ -12,6 +12,14 @@ export default defineConfig(({ command, mode }) => ({
   server: {
     host: "0.0.0.0",
     port: 8080,
+    proxy: {
+      "/api/take-blip/dashboard": {
+        target: "https://backend-blip.vercel.app",
+        changeOrigin: true,
+        secure: true,
+        rewrite: () => "/api/dashboard.ts",
+      },
+    },
     hmr: {
       overlay: false,
     },

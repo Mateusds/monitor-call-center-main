@@ -83,11 +83,17 @@ export async function readBlipQueuesExcelFile(filePath: string): Promise<BlipQue
   try {
     console.log('Iniciando leitura do arquivo Excel (Blip Filas):', filePath);
 
-    // Adicionar o basename para produção
-    const basePath = import.meta.env.PROD ? '/monitor-call-center-main' : '';
-    const fullFilePath = basePath + filePath;
+    // Usar o caminho relativo direto, sem basename hardcoded
+    const fullFilePath = filePath.startsWith('/') ? filePath : '/' + filePath;
 
     const response = await fetch(fullFilePath);
+    console.log('🔍 Fetch response:', {
+      url: fullFilePath,
+      status: response.status,
+      statusText: response.statusText,
+      headers: Object.fromEntries(response.headers.entries())
+    });
+    
     if (!response.ok) {
       throw new Error(`Erro ao buscar arquivo: ${response.status} ${response.statusText}`);
     }

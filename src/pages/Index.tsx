@@ -8,6 +8,7 @@ import { ChatView } from '@/components/chat/ChatView';
 import { AnalyticsChatView } from '@/components/analytics-chat/AnalyticsChatView';
 import { PerformanceView } from '@/components/performance/PerformanceView';
 import { RelatorioConsolidadoView } from '@/components/relatorio/RelatorioConsolidadoView';
+import { TakeBlipIntegrationView } from '@/components/take-blip/TakeBlipIntegrationView';
 import { cn } from '@/lib/utils';
 
 const Index = () => {
@@ -32,6 +33,8 @@ const Index = () => {
         return <OperatorsView />;
       case 'relatorio-consolidado':
         return <RelatorioConsolidadoView />;
+      case 'integracao-take-blip':
+        return <TakeBlipIntegrationView />;
       default:
         return <DashboardView />;
     }
