@@ -119,6 +119,28 @@ export function ChatView() {
   if (!data) return <div>Dados vazios ou inválidos.</div>;
 
   const { kpis, operators, queueData } = data;
+  const allowedWhatsAppOperators = new Set([
+    'raylaneferreira@smilesaude.com.br',
+    'thaysesouza@smilesaude.com.br',
+    'thayse souza',
+    'ivana firmino'
+  ]);
+  const normalizeOperator = (value?: string) =>
+    (value || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-zA-Z0-9@.\s]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .toLowerCase();
+  const isMayaraOperator = (normalizedName: string) =>
+    normalizedName.includes('mayara iasmin') &&
+    normalizedName.includes('araujo') &&
+    normalizedName.includes('carvalho');
+  const filteredOperators = (operators || []).filter((operator: any) => {
+    const normalizedName = normalizeOperator(operator?.nome);
+    return allowedWhatsAppOperators.has(normalizedName) || isMayaraOperator(normalizedName);
+  });
   const totalLabel = dataSource === 'blip-filas' ? 'Tickets Finalizados' : 'Total Conversas';
   const atendidasLabel = dataSource === 'blip-filas' ? 'Finalizados' : 'Atendidas';
 
@@ -249,7 +271,7 @@ export function ChatView() {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {operators.map((operator: any, index: number) => (
+                {filteredOperators.map((operator: any, index: number) => (
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
                     <div className="flex items-center gap-3">
                       <Avatar className="h-8 w-8">
