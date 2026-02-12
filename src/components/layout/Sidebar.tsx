@@ -22,7 +22,7 @@ const navItems = [
   // { id: 'analytics-chat', label: 'Analytics Chat', icon: BarChart3 },
   { id: 'operadores', label: 'Operadores', icon: Users },
   { id: 'chat', label: 'Dashboard WhatsApp', icon: MessageCircle, },
-  { id: 'integracao-take-blip', label: 'Integração Take Blip', icon: MessageCircle, },
+  // { id: 'integracao-take-blip', label: 'Integração Take Blip', icon: MessageCircle, },
   { id: 'relatorio-consolidado', label: 'Relatório Consolidado', icon: FileText },
 ];
 
